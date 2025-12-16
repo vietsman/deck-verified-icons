@@ -1,0 +1,104 @@
+/* =========================================================
+ *   BASE — pseudo-elements do NOT render / take space
+ *   ========================================================= */
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before,
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after {
+   content: "";
+   box-sizing: border-box;
+   width: 20px;
+   height: 20px;
+   border-radius: 20px;
+   padding: 2px;
+   align-items: center;
+   justify-content: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+   transition: opacity 150ms ease, transform 150ms ease;
+   pointer-events: none;
+}
+
+/* =========================================================
+ *   POSITIONING — mouse OR controller
+ *   ========================================================= */
+._2GRcKrPZsMSF6glMPRMZei:hover
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*)),
+
+.gpfocus
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*)) {
+   position: relative;
+   justify-content: flex-end;
+}
+
+/* =========================================================
+ *   ::before — controller pill
+ *   ========================================================= */
+._2GRcKrPZsMSF6glMPRMZei:hover
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:empty::before,
+
+._2GRcKrPZsMSF6glMPRMZei:hover
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before,
+
+.gpfocus
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:empty::before,
+
+.gpfocus
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before {
+
+   content: var(--controller-icon);
+   position: absolute;
+   display: inline-flex;
+   width: calc(1px * var(--width));
+   height: 24px;
+   padding: 2px;
+   border: 0;
+   border-radius: 20px;
+   background-color: rgba(0,0,0,.7);
+   backdrop-filter: blur(100px);
+   opacity: 1;
+   transform: translateY(0);
+
+   background-image: var(--controller-icon);
+   background-size: 20px 20px;
+   background-repeat: no-repeat;
+   background-position: calc(1px * var(--padding)) center;
+}
+
+/* =========================================================
+ *   ::after — confirmation icon
+ *   ========================================================= */
+._2GRcKrPZsMSF6glMPRMZei:hover
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:empty::after,
+
+._2GRcKrPZsMSF6glMPRMZei:hover
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after,
+
+.gpfocus
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:empty::after,
+
+.gpfocus
+.tvCvyQrDNndbXWp_b5__b
+._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after {
+
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 24px;
+   height: 24px;
+   padding: 2px;
+   opacity: 1;
+   transform: translateY(0);
+
+   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2359bf40'><path fill-rule='evenodd' clip-rule='evenodd' d='M10 19C14.9706 19 19 14.9706 19 10C19 5.02944 14.9706 1 10 1C5.02944 1 1 5.02944 1 10C1 14.9706 5.02944 19 10 19ZM8.33342 11.9222L14.4945 5.76667L16.4556 7.72779L8.33342 15.8556L3.26675 10.7833L5.22786 8.82223L8.33342 11.9222Z'/></svg>");
+   background-size: 20px 20px;
+   background-repeat: no-repeat;
+   background-position: center;
+}

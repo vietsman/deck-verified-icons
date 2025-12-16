@@ -1,8 +1,8 @@
 {
-  "name": "Deck Verified & Controller Icons",
-  "author": "Alex Nguyen",
+  "name": "Deck Verified & Controller icons on covers",
+  "author": "Vietsman",
   "manifest_version": 8,
-  "version": "v1.0",
+  "version": "v1.1",
   "inject": {
     "theme.css": [
       "bigpicture"
@@ -11,7 +11,7 @@
   "patches": {
     "Controller Icon": {
       "type": "dropdown",
-      "default": "Xbox Controllers",
+      "default": "SteamOS",
       "values": {
         "Xbox Controllers": {
           "--controller-icon": [
