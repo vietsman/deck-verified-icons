@@ -17,11 +17,11 @@ jobs:
         id: extract
         run: |
           set -euo pipefail
-          echo "Searching for theme.json under Deck Verified Icons..."
-          # Look for theme.json in Deck Verified Icons directory
-          file=$(find . -type f \( -path "./Deck\ Verified\ Icons/*theme.json" -o -path "./Deck\ Verified\ Icons/theme.json" \) | head -n1 || true)
+          echo "Searching for theme.json under Deck Verified Badge..."
+          # Look for theme.json in Deck Verified Badge directory
+          file=$(find . -type f \( -path "./Deck\ Verified\ Badge/*theme.json" -o -path "./Deck\ Verified\ Badge/theme.json" \) | head -n1 || true)
           if [ -z "$file" ]; then
-            echo "No theme.json found under Deck Verified Icons"
+            echo "No theme.json found under Deck Verified Badge"
             exit 1
           fi
           echo "Using file: $file"
@@ -41,17 +41,17 @@ jobs:
           echo "Found version: $version"
           echo "version=$version" >> $GITHUB_OUTPUT
 
-      - name: Zip DeckVerifiedIcons
+      - name: Zip DeckVerifiedBadge
         id: zip
         run: |
           set -euo pipefail
-          zipname="DeckVerifiedIcons-latest.zip"
+          zipname="DeckVerifiedBadge-latest.zip"
           rm -f "$zipname"
-          if [ ! -d "Deck Verified Icons" ]; then
-            echo 'Directory "Deck Verified Icons" not found'
+          if [ ! -d "Deck Verified Badge" ]; then
+            echo 'Directory "Deck Verified Badge" not found'
             exit 1
           fi
-          zip -r "$zipname" "Deck Verified Icons"
+          zip -r "$zipname" "Deck Verified Badge"
           echo "zipfile=$zipname" >> $GITHUB_OUTPUT
 
       - name: Create release and upload asset
@@ -59,4 +59,4 @@ jobs:
         with:
           tag: ${{ steps.extract.outputs.version }}
           name: ${{ steps.extract.outputs.version }}
-          artifacts: DeckVerifiedIcons-latest.zip
+          artifacts: DeckVerifiedBadge-latest.zip
