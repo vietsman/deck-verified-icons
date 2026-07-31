@@ -47,11 +47,11 @@ jobs:
           set -euo pipefail
           zipname="DeckVerifiedIcons-latest.zip"
           rm -f "$zipname"
-          if [ ! -d "DeckVerifiedIcons" ]; then
-            echo "Directory DeckVerifiedIcons not found"
+          if [ ! -d "Deck Verified Icons" ]; then
+            echo 'Directory "Deck Verified Icons" not found'
             exit 1
           fi
-          zip -r "$zipname" DeckVerifiedIcons
+          zip -r "$zipname" "Deck Verified Icons"
           echo "zipfile=$zipname" >> $GITHUB_OUTPUT
 
       - name: Create release and upload asset
