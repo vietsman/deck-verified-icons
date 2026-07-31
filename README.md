@@ -12,11 +12,11 @@ A CSS Loader theme for SteamOS that displays the Deck Verified and Controller Su
 
 ## 📥 Installation
 
-### Method 1: CSS Loader Store (Recommended)
+### <s>Method 1: CSS Loader Store (Recommended)
 1. Ensure you have [Decky Loader](https://github.com/SteamDeckHomebrew/decky-loader) installed on your Steam Deck.
 2. Install the **CSS Loader** plugin from the Decky plugin store.
 3. Open the CSS Loader menu, navigate to the Theme Store, and search for **Deck Verified Icons**.
-4. Install and enable the theme!
+4. Install and enable the theme!</s>
 
 ### Method 2: Manual Installation
 1. Go to the [Releases](https://github.com/vietsman/deck-verified-icons/releases/latest) page of this repository.
