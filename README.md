@@ -8,7 +8,7 @@ A CSS Loader theme for SteamOS that displays the Deck Verified and Controller Su
 ![Before vs After](Before.vs.After.jpg)
 
 ### Menu
-![Menu](Menu.png)
+![Menu](Menu.jpg)
 
 ## 📥 Installation
 
