@@ -17,11 +17,11 @@ jobs:
         id: extract
         run: |
           set -euo pipefail
-          echo "Searching for theme.json under DeckVerifiedIcons..."
-          # Look for theme.json in DeckVerifiedIcons directory
-          file=$(find . -type f \( -path "./DeckVerifiedIcons/*theme.json" -o -path "./DeckVerifiedIcons/theme.json" \) | head -n1 || true)
+          echo "Searching for theme.json under Deck Verified Icons..."
+          # Look for theme.json in Deck Verified Icons directory
+          file=$(find . -type f \( -path "./Deck\ Verified\ Icons/*theme.json" -o -path "./Deck\ Verified\ Icons/theme.json" \) | head -n1 || true)
           if [ -z "$file" ]; then
-            echo "No theme.json found under DeckVerifiedIcons"
+            echo "No theme.json found under Deck Verified Icons"
             exit 1
           fi
           echo "Using file: $file"
