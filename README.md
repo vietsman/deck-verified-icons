@@ -19,8 +19,8 @@ A CSS Loader theme for SteamOS that displays the Deck Verified and Controller Su
 4. Install and enable the theme!</s>
 
 ### Method 2: Manual Installation
-1. Go to the [Releases](https://github.com/vietsman/deck-verified-icons/releases/latest) page of this repository.
-2. Download the latest release [DeckVerifiedBadge-latest.zip](https://github.com/vietsman/deck-verified-icons/releases/download/latest/DeckVerifiedBadge-latest.zip) file.
+1. Go to the [Releases](https://github.com/vietsman/deck-verified-badge/releases/latest) page of this repository.
+2. Download the latest release [DeckVerifiedBadge-latest.zip](https://github.com/vietsman/deck-verified-badge/releases/download/latest/DeckVerifiedBadge-latest.zip) file.
 3. Extract the zip file into your CSS Loader themes directory: `/home/deck/homebrew/themes/`
 4. Open the CSS Loader plugin on your Steam Deck, refresh your themes, and toggle it on.
 
@@ -35,7 +35,7 @@ There are 4 icon styles to choose from:
 
 ## 🐛 Issues & Feedback
 
-If you run into any visual bugs or have suggestions for improvements, please feel free to [open an issue](https://github.com/vietsman/deck-verified-icons/issues) on this repository.
+If you run into any visual bugs or have suggestions for improvements, please feel free to [open an issue](https://github.com/vietsman/deck-verified-badge/issues) on this repository.
 
 ## 📜 License
 
