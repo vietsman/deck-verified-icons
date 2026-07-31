@@ -1,5 +1,5 @@
 /* =========================================================
- *   BASE — pseudo-elements do NOT render / take space
+ *   BASE — pseudo-elements
  *   ========================================================= */
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before,
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after {
@@ -56,10 +56,10 @@
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before {
 
-   content: var(--controller-icon);
+   content: var(--dvb-controller-icon);
    position: absolute;
    display: inline-flex;
-   width: calc(1px * var(--width));
+   width: calc(1px * var(--dvb-width));
    height: 24px;
    padding: 2px;
    border: 0;
@@ -69,10 +69,10 @@
    opacity: 1;
    transform: translateY(0);
 
-   background-image: var(--controller-icon);
+   background-image: var(--dvb-controller-icon);
    background-size: 20px 20px;
    background-repeat: no-repeat;
-   background-position: calc(1px * var(--padding)) center;
+   background-position: calc(1px * var(--dvb-padding)) center;
 }
 
 /* =========================================================
