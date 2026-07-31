@@ -1,0 +1,62 @@
+name: Create Release
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Find and extract version from theme.json
+        id: extract
+        run: |
+          set -euo pipefail
+          echo "Searching for theme.json under DeckVerifiedIcons..."
+          # Look for theme.json in DeckVerifiedIcons directory
+          file=$(find . -type f \( -path "./DeckVerifiedIcons/*theme.json" -o -path "./DeckVerifiedIcons/theme.json" \) | head -n1 || true)
+          if [ -z "$file" ]; then
+            echo "No theme.json found under DeckVerifiedIcons"
+            exit 1
+          fi
+          echo "Using file: $file"
+          # Try jq-based extraction for common keys
+          version=""
+          if command -v jq >/dev/null 2>&1; then
+            version=$(jq -r '(.version // .manifest.version // .theme.version // .info.version // .meta.version) // empty' "$file" | head -n1)
+          fi
+          # Fallback to a grep-based extraction if jq didn't find it
+          if [ -z "$version" ] || [ "$version" = "null" ]; then
+            version=$(grep -Eo '"version"[[:space:]]*:[[:space:]]*"[^"]+"' "$file" | head -n1 | sed -E 's/.*"version"[[:space:]]*:[[:space:]]*"([^\\"]+)".*/\1/')
+          fi
+          if [ -z "$version" ]; then
+            echo "Could not extract version from $file"
+            exit 1
+          fi
+          echo "Found version: $version"
+          echo "version=$version" >> $GITHUB_OUTPUT
+
+      - name: Zip DeckVerifiedIcons
+        id: zip
+        run: |
+          set -euo pipefail
+          zipname="DeckVerifiedIcons-latest.zip"
+          rm -f "$zipname"
+          if [ ! -d "DeckVerifiedIcons" ]; then
+            echo "Directory DeckVerifiedIcons not found"
+            exit 1
+          fi
+          zip -r "$zipname" DeckVerifiedIcons
+          echo "zipfile=$zipname" >> $GITHUB_OUTPUT
+
+      - name: Create release and upload asset
+        uses: ncipollo/release-action@v1
+        with:
+          tag: ${{ steps.extract.outputs.version }}
+          name: ${{ steps.extract.outputs.version }}
+          artifacts: DeckVerifiedIcons-latest.zip
