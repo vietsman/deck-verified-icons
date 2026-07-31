@@ -20,10 +20,12 @@
 /* =========================================================
  *   POSITIONING — mouse OR controller
  *   ========================================================= */
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 ._2GRcKrPZsMSF6glMPRMZei:hover
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*)),
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 .gpfocus
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*)) {
@@ -34,18 +36,22 @@
 /* =========================================================
  *   ::before — controller icon
  *   ========================================================= */
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 ._2GRcKrPZsMSF6glMPRMZei:hover
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:empty::before,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 ._2GRcKrPZsMSF6glMPRMZei:hover
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 .gpfocus
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:empty::before,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 .gpfocus
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::before {
@@ -72,18 +78,22 @@
 /* =========================================================
  *   ::after — checkmark icon
  *   ========================================================= */
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 ._2GRcKrPZsMSF6glMPRMZei:hover
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:empty::after,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 ._2GRcKrPZsMSF6glMPRMZei:hover
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 .gpfocus
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:empty::after,
 
+._1FxmNlnGGfU52UuU63ojqM:not(:has(._2pjdgFqp04LlhgtFS0rQn_))
 .gpfocus
 .tvCvyQrDNndbXWp_b5__b
 ._3BPFqWN5T-x8njyrRYM1CX:not(:has(*))::after {
